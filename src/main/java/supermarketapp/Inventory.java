@@ -1,9 +1,9 @@
-package com.example.supermarketapp;
+package supermarketapp;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class Inventory {
     @FXML
     private Label welcomeText;
 

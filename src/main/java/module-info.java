@@ -3,6 +3,8 @@ module com.example.supermarketapp {
     requires javafx.fxml;
 
 
-    opens com.example.supermarketapp to javafx.fxml;
-    exports com.example.supermarketapp;
+    opens supermarketapp to javafx.fxml;
+    exports supermarketapp;
+    exports supermarketapp.orders;
+    opens supermarketapp.orders to javafx.fxml;
 }
