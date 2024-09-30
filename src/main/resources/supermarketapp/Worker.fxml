@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="780.0" prefWidth="1166.0" style="-fx-background-color: #f7f5e1;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketapp.workers.Worker">
+    <children>
+        <AnchorPane fx:id="leftPane" layoutX="36.0" layoutY="35.0" prefHeight="621.0" prefWidth="390.0" styleClass="MainAnchorPane">
+            <children>
+                <Button fx:id="uploadButton" contentDisplay="TOP" layoutX="146.0" layoutY="8.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="120.0" styleClass="upload-image" textFill="#b24646">
+                    <graphic>
+                        <ImageView fx:id="image" fitHeight="104.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/image-download.png" />
+                            </image>
+                            <effect>
+                                <DropShadow height="49.07" radius="18.1875" spread="0.3" width="25.68">
+                                    <color>
+                                        <Color opacity="0.4000000059604645" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Label layoutX="96.0" layoutY="161.0" prefHeight="39.0" prefWidth="24.0" text="ID :" />
+                <Label layoutX="57.0" layoutY="224.0" prefHeight="39.0" prefWidth="64.0" text=": اسم العامل" />
+                <Label layoutX="85.0" layoutY="278.0" prefHeight="39.0" prefWidth="43.0" text=": مرتب" />
+                <TextField fx:id="idTextfield" layoutX="121.0" layoutY="168.0" prefHeight="26.0" prefWidth="256.0" />
+                <TextField fx:id="workerNameTextfield" layoutX="121.0" layoutY="230.0" prefHeight="26.0" prefWidth="256.0" />
+                <TextField fx:id="salaryTextField" layoutX="121.0" layoutY="285.0" prefHeight="26.0" prefWidth="256.0" />
+                <Button fx:id="addButton" layoutX="68.0" layoutY="418.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" styleClass="add-button" text="إضافة">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button fx:id="resetButton" layoutX="68.0" layoutY="491.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" styleClass="reset-button" text="إعادة ضبط">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button fx:id="updateButton" layoutX="241.0" layoutY="418.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" styleClass="update-button" text="تعديل">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button fx:id="deleteButton" layoutX="241.0" layoutY="489.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" styleClass="delete-button" text="حذف">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="rightPane" layoutX="475.0" layoutY="35.0" prefHeight="738.0" prefWidth="683.0" styleClass="MainAnchorPane">
+            <children>
+                <TextField fx:id="searchTextfield" layoutX="19.0" layoutY="34.0" prefHeight="39.0" prefWidth="256.0" AnchorPane.leftAnchor="20.0" />
+                <TableView fx:id="workerTable" layoutX="22.0" layoutY="104.0" prefHeight="607.0" prefWidth="645.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="17.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="75.199951171875" text="ID" />
+                        <TableColumn fx:id="nameColumn" prefWidth="381.5999755859375" text="اسم العامل" />
+                        <TableColumn fx:id="SalaryColumn" prefWidth="185.5999755859375" text="مرتب" />
+                    </columns>
+                </TableView>
+                <Button fx:id="searchButton" layoutX="233.0" layoutY="36.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="15.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/search.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

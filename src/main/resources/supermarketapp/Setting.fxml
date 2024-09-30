@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="780.0" prefWidth="1166.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketapp.settings.Setting">
+    <Label layoutX="62.0" layoutY="161.0" prefHeight="39.0" prefWidth="60.0" text=": اسم المحل" />
+    <TextField layoutX="121.0" layoutY="168.0" prefHeight="26.0" prefWidth="256.0" />
+   <Button layoutX="386.0" layoutY="168.0" mnemonicParsing="false" text="تعديل" />
+   <Button layoutX="386.0" layoutY="260.0" mnemonicParsing="false" text="+" />
+   <Label layoutX="94.0" layoutY="253.0" prefHeight="39.0" prefWidth="25.0" text=": فرع" />
+   <TextField layoutX="121.0" layoutY="260.0" prefHeight="26.0" prefWidth="256.0" />
+   <TableView layoutX="121.0" layoutY="286.0" prefHeight="208.0" prefWidth="256.0">
+     <columns>
+       <TableColumn prefWidth="255.1999969482422" text="C1" />
+     </columns>
+   </TableView>
+</AnchorPane>

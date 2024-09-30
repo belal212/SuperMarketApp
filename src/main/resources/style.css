@@ -1,0 +1,102 @@
+.MainAnchorPane{
+    -fx-background-color:#F0E68C;
+    -fx-background-radius: 20px;
+    -fx-border-color: #4682B4;
+    -fx-border-width: 2;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.4), 20,0,0,0);
+}
+.text-field{
+    -fx-background-color: #f7f5e1;
+    -fx-border-color: black;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.text-field:hover{
+    -fx-border-color: #4682B4;
+}
+.text-field:focused{
+    -fx-border-color: #4682B4;
+}
+.choice-box{
+    -fx-background-color: #f7f5e1;
+    -fx-border-color: black;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1.5px;
+    -fx-background-radius: 20px;
+}
+.choice-box:hover{
+    -fx-border-color: #4682B4;
+}
+.choice-box:focused{
+    -fx-border-color: #4682B4;
+}
+
+.table-view{
+    -fx-background-color: #f7f5e1;
+    -fx-border-color: #4682B4;
+    -fx-border-radius: 20px;
+    -fx-padding: 0px;
+
+    -fx-background-radius: 20px;;
+}
+.table-view .column-header-background{
+    -fx-background-color: #4682B4;
+    -fx-background-radius: 20px 20px 0px 0px;
+}
+.table-view .column-header , .filter{
+    -fx-background-color: transparent;
+    -fx-size:40px
+}
+.label{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+.add-button{
+    -fx-background-color: #0b571f;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #f7f5e1;
+}
+.add-button:hover{
+    -fx-background-color: #0d9431;
+    -fx-pref-width: 80;
+    -fx-pref-height: 48;
+}
+.update-button{
+    -fx-background-color: #392da8;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #f7f5e1;
+}
+.update-button:hover{
+    -fx-background-color: #2813f0;
+    -fx-pref-width: 80;
+    -fx-pref-height: 48;
+}
+.reset-button{
+    -fx-background-color: #531666;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #f7f5e1;
+}
+.reset-button:hover{
+    -fx-background-color: #9c1ac4;
+    -fx-pref-width: 80;
+    -fx-pref-height: 48;
+}
+.delete-button{
+    -fx-background-color: #9e1825;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #f7f5e1;
+}
+.delete-button:hover{
+    -fx-background-color: #de1428;
+    -fx-pref-width: 80;
+    -fx-pref-height: 48;
+}
+.upload-image{
+    -fx-background-color: #F0E68C;
+    -fx-background-radius: 20;
+}
+.upload-image:hover{
+    -fx-background-color: #f7f5e1;
+}

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
@@ -13,13 +14,13 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="780.0" prefWidth="1166.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketapp.products.Product">
+<AnchorPane fx:id="root" prefHeight="780.0" prefWidth="1166.0" style="-fx-background-color: #f7f5e1;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketapp.products.Product">
    <children>
-      <AnchorPane layoutX="36.0" layoutY="35.0" prefHeight="737.0" prefWidth="390.0" style="-fx-background-color: white; -fx-border-color: red;">
+      <AnchorPane fx:id="leftPane" layoutX="36.0" layoutY="35.0" prefHeight="737.0" prefWidth="390.0" styleClass="MainAnchorPane" stylesheets="@../style.css">
          <children>
-            <Button contentDisplay="TOP" layoutX="146.0" layoutY="8.0" mnemonicParsing="false" prefHeight="106.0" prefWidth="104.0" style="-fx-background-color: transparent; -fx-background-radius: 15;" text="تحميل" textFill="#b24646">
+            <Button fx:id="imageButton" contentDisplay="TOP" layoutX="146.0" layoutY="8.0" mnemonicParsing="false" prefHeight="106.0" prefWidth="104.0" styleClass="upload-image" textFill="#b24646">
                <graphic>
-                  <ImageView fitHeight="104.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="ProductImage" fitHeight="104.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/image-download.png" />
                      </image>
@@ -35,44 +36,69 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Label layoutX="53.0" layoutY="161.0" prefHeight="39.0" prefWidth="64.0" text="Product ID :" />
+            <Label layoutX="96.0" layoutY="161.0" prefHeight="39.0" prefWidth="20.0" text="ID :" />
             <Label layoutX="59.0" layoutY="214.0" prefHeight="39.0" prefWidth="64.0" text="  : نوع المنتج" />
             <Label layoutX="84.0" layoutY="267.0" prefHeight="39.0" prefWidth="38.0" text=" : شركة" />
-            <Label layoutX="90.0" layoutY="320.0" prefHeight="39.0" prefWidth="31.0" text=": فرع" />
-            <Label layoutX="57.0" layoutY="373.0" prefHeight="39.0" prefWidth="64.0" text=": اسم المنتج" />
-            <Label layoutX="80.0" layoutY="426.0" prefHeight="39.0" prefWidth="38.0" text=": الكمية" />
-            <Label layoutX="54.0" layoutY="477.0" prefHeight="39.0" prefWidth="64.0" text=": سعر الجملة" />
-            <TextField layoutX="121.0" layoutY="168.0" prefHeight="26.0" prefWidth="256.0" />
-            <ChoiceBox layoutX="121.0" layoutY="222.0" prefHeight="26.0" prefWidth="256.0" />
-            <TextField layoutX="121.0" layoutY="273.0" prefHeight="26.0" prefWidth="256.0" />
-            <ChoiceBox layoutX="121.0" layoutY="326.0" prefHeight="26.0" prefWidth="256.0" />
-            <TextField layoutX="121.0" layoutY="379.0" prefHeight="26.0" prefWidth="256.0" />
-            <TextField layoutX="121.0" layoutY="432.0" prefHeight="26.0" prefWidth="256.0" />
-            <TextField layoutX="121.0" layoutY="483.0" prefHeight="26.0" prefWidth="256.0" />
-            <Button layoutX="68.0" layoutY="586.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" text="إضافة" />
-            <Button layoutX="68.0" layoutY="658.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" text="إعادة ضبط" />
-            <Button layoutX="241.0" layoutY="586.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" text="تعديل" />
-            <Button layoutX="241.0" layoutY="658.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" text="حذف" />
-            <Label layoutX="63.0" layoutY="530.0" prefHeight="39.0" prefWidth="54.0" text=": سعر البيع" />
-            <TextField layoutX="121.0" layoutY="536.0" prefHeight="26.0" prefWidth="256.0" />
+            <Label layoutX="57.0" layoutY="319.0" prefHeight="39.0" prefWidth="64.0" text=": اسم المنتج" />
+            <Label layoutX="80.0" layoutY="372.0" prefHeight="39.0" prefWidth="38.0" text=": الكمية" />
+            <Label layoutX="54.0" layoutY="423.0" prefHeight="39.0" prefWidth="64.0" text=": سعر الجملة" />
+            <TextField fx:id="IDtextfield" layoutX="121.0" layoutY="168.0" prefHeight="26.0" prefWidth="256.0" />
+            <ChoiceBox fx:id="typeSelector" layoutX="121.0" layoutY="222.0" prefHeight="26.0" prefWidth="256.0" />
+            <TextField fx:id="companyTextField" layoutX="121.0" layoutY="273.0" prefHeight="26.0" prefWidth="256.0" />
+            <TextField fx:id="productNameTextfield" layoutX="121.0" layoutY="325.0" prefHeight="26.0" prefWidth="256.0" />
+            <TextField fx:id="quantity" layoutX="121.0" layoutY="378.0" prefHeight="26.0" prefWidth="256.0" />
+            <TextField fx:id="originalPrice" layoutX="121.0" layoutY="429.0" prefHeight="26.0" prefWidth="256.0" />
+            <Button fx:id="addButton" layoutX="68.0" layoutY="558.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" styleClass="add-button" text="إضافة">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="updateButton" layoutX="241.0" layoutY="558.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" styleClass="update-button" text="تعديل">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="resetButton" layoutX="68.0" layoutY="630.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" styleClass="reset-button" text="إعادة ضبط">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="deleteButton" layoutX="241.0" layoutY="630.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="78.0" styleClass="delete-button" text="حذف">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label layoutX="63.0" layoutY="476.0" prefHeight="39.0" prefWidth="54.0" text=": سعر البيع" />
+            <TextField fx:id="salePrice" layoutX="121.0" layoutY="482.0" prefHeight="26.0" prefWidth="256.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="475.0" layoutY="35.0" prefHeight="738.0" prefWidth="683.0" style="-fx-background-color: white; -fx-border-color: red;">
+      <AnchorPane fx:id="rightPane" layoutX="475.0" layoutY="35.0" prefHeight="738.0" prefWidth="683.0" styleClass="MainAnchorPane" stylesheets="@../style.css">
          <children>
-            <TextField layoutX="19.0" layoutY="34.0" prefHeight="39.0" prefWidth="256.0" AnchorPane.leftAnchor="20.0" />
-            <TableView layoutX="22.0" layoutY="104.0" prefHeight="607.0" prefWidth="645.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="17.0">
+            <TextField fx:id="searchTextfield" layoutX="19.0" layoutY="34.0" prefHeight="39.0" prefWidth="256.0" AnchorPane.leftAnchor="20.0" />
+            <TableView fx:id="ProductTable" layoutX="25.0" layoutY="104.0" prefHeight="605.0" prefWidth="641.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="19.0">
               <columns>
-                <TableColumn prefWidth="55.20001220703125" text="ID" />
-                <TableColumn prefWidth="153.60003662109375" text="اسم المنتج" />
-                  <TableColumn prefWidth="84.0" text="نوع" />
-                  <TableColumn prefWidth="89.5999755859375" text="شركة" />
-                  <TableColumn prefWidth="84.79998779296875" text="الكمية" />
-                  <TableColumn prefWidth="72.800048828125" text="الجملة" />
-                  <TableColumn prefWidth="99.60002441406255" text="البيع" />
+                <TableColumn fx:id="IDcolumn" prefWidth="55.20001220703125" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="153.60003662109375" text="اسم المنتج" />
+                  <TableColumn fx:id="typeColumn" prefWidth="84.0" text="نوع" />
+                  <TableColumn fx:id="companyColumn" prefWidth="89.5999755859375" text="شركة" />
+                  <TableColumn fx:id="quantityColumn" prefWidth="84.79998779296875" text="الكمية" />
+                  <TableColumn fx:id="originalPriceColumn" prefWidth="72.800048828125" text="الجملة" />
+                  <TableColumn fx:id="salePriceColumn" prefWidth="98.00004882812505" text="البيع" />
               </columns>
             </TableView>
-            <Button layoutX="233.0" layoutY="36.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="15.0" style="-fx-background-color: transparent;">
+            <Button fx:id="searchButton" layoutX="233.0" layoutY="36.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="15.0" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -80,6 +106,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </AnchorPane>
